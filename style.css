@@ -1,0 +1,237 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a2e; /* Dark background */
+    color: #fff; /* Light text */
+    padding: 20px;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Add -webkit- and -moz- vendor prefixes for compatibility */
+@-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+a {
+    color: #00aaff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff6f61;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #28a745; /* Green background */
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+    list-style: none; /* Remove bullets */
+}
+
+nav ul li {
+    margin: 0 20px; /* Space between navigation items */
+}
+
+nav ul li a {
+    font-size: 1rem;
+    color: #fff; /* White text color */
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Container */
+.cnt {
+    max-width: 900px;
+    margin: 100px auto 0; /* Adjust margin to account for the fixed navbar */
+    padding: 20px;
+    background-color: #16213e; /* Darker background for sections */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cnt:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: slideIn 0.8s ease forwards;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@-webkit-keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Section Headings */
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00aaff;
+    padding-bottom: 5px;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background-color: #ff6f61;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    animation: growLine 0.6s ease forwards;
+}
+
+/* Grow Line Animation */
+@keyframes growLine {
+    from { width: 0; }
+    to { width: 80px; }
+}
+
+@-webkit-keyframes growLine {
+    from { width: 0; }
+    to { width: 80px; }
+}
+
+/* About Section */
+.about p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@-webkit-keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Skills Section */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.skills li {
+    list-style: none;
+    background-color: #00aaff;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    animation: popIn 0.8s ease-in-out forwards;
+}
+
+@keyframes popIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@-webkit-keyframes popIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.skills li:hover {
+    background-color: #0056b3;
+}
+
+/* Project Section */
+.projects {
+    margin-bottom: 40px;
+}
+
+.projects h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.projects p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.projects a {
+    color: #00aaff;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.projects a:hover {
+    color: #ff6f61;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
